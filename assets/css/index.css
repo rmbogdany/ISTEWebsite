@@ -1,0 +1,919 @@
+/*
+  Name: Rachael Bogdany
+  Date: 4/5/2020
+  Filename: index.css
+  ISTE340 Project 2
+*/
+/* General */
+*{
+	margin: 0 auto;
+	padding: 0;
+	font-family: 'Montserrat', Arial;
+}
+
+/* Intro */
+.intro{
+	width: 100%;
+	height: 96vh;
+	background-color: #333333;
+	color: #F36E21;
+	text-align: center;
+}
+#title::before{
+	content: "";
+	position: absolute;
+	bottom: 80px;
+	right: 50%;
+	margin-left: -15px;
+	border-width: 15px;
+	border-style: solid;
+	border-color: #FFF transparent transparent transparent;
+}
+#heading{
+	font-size:2vw;
+	position: relative;
+	top: 48%;
+	margin: 0 10%;
+}
+
+/* Nav Menu */
+#nav-menu{
+	height:300px;
+	top:50%;
+	right:0;
+	margin-top:-150px;
+	position: fixed;
+	list-style: none;
+}
+#nav-menu ul{
+	background-color:#f8f8ff;
+	border-radius: 20px;
+	padding: 4px 0;
+}
+#nav-menu ul li{
+	display: block;
+	width: 14px;
+	height: 13px;
+	margin: 7px;
+	position: relative;
+}
+#nav-menu ul li a{
+	display: block;
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	text-decoration: none;
+}
+#nav-menu ul li a span{
+	border-radius: 50%;
+	position: absolute;
+	z-index: 1;
+	height: 6px;
+	width: 6px;
+	border: 0;
+	background: #333;
+	left: 50%;
+	top: 50%;
+	margin: -3px 0 0 -3px;
+}
+#nav-menu ul li a.mPS2id-highlight span{
+	height: 12px;
+	width: 12px;
+	margin: -6px 0 0 -6px;
+	border-radius: 100%;
+}
+
+/* About Section */
+.about{
+	width: 100%;
+	padding-top: 15%;
+	padding-bottom: 15%;
+	background-image: url('../media/bckgrnd.jpg');
+}
+#aboutContent{
+	color: white;
+	background-color:#333333;
+	width: 70%;
+	padding: 70px 5%; 
+	margin-left: 10%;
+	margin-right: 10%;
+}
+#aboutTitle{
+	text-align: center;
+	font-size: 30px;
+	padding-bottom: 20px;
+}
+#description{
+	text-align: center;
+	padding: 20px;
+	font-size: 20px;
+}
+#quoteContent{
+	position: relative;
+    max-width: 620px;
+    margin: 60px auto;
+    align-self: center;
+}
+#quoteContent h2{
+    position: relative; /* for pseudos */
+    color: #F36E21;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1;
+    margin: 0;
+    border: solid 1px;
+    border-radius:20px;
+    padding: 25px;
+}
+#quoteContent h2:after {
+    content:"";
+    position: absolute;
+    border: 1px solid #F36E21;
+    border-radius: 0 50px 0 0;
+    width: 60px;
+    height: 60px;
+    bottom: -61px;
+    left: 50px;
+    border-bottom: none;
+    border-left: none;
+    z-index: 3; 
+}
+#quoteContent h2:before {
+    content:"";
+    position: absolute;
+    width: 80px;
+    border: 6px solid #333333;
+    bottom: -3px;
+    left: 50px;
+    z-index: 2;
+}
+#quoteContent h4{
+	position: relative;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0;
+    padding-top: 15px;
+    z-index: 1;
+    margin-left:150px;
+    padding-left:12px;
+}
+
+/* Undergraduate Section */
+.undergraduate{
+	width: 80%;
+	padding: 10% 10%;
+	text-align: center;
+	color: #333333;
+}
+.undergraduate h1{
+	padding-bottom: 50px;
+	font-size: 30px;
+}
+.undergraduate .title{
+	background-color:white;
+}
+.undergraduate .title a{
+	color: black;
+}
+.undergraduate .content a{
+	color: black;
+	text-decoration: none;
+}
+.undergraduate .content a:hover{
+	text-decoration: underline;
+}
+
+/* Both: (Under)graduate */
+.degrees{
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 30px;
+}
+.degrees p{
+	font-size: 20px;
+}
+.degrees div:hover{
+	cursor: pointer;
+}
+.degrees .content{
+	display: none;
+}
+.title h2, .content h2{
+	color: #F36E21;
+}
+.title i{
+	padding-top: 5px;
+}
+.content div{
+	text-align: right;
+}
+.content h3{
+	padding-top:5px;
+}
+.content p{
+	font-size: 13px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+.title p{
+	padding-top: 30px;
+}
+.degrees div h2{
+	padding-bottom: 10px;
+}
+.hip-pagination{
+	display: none;
+}
+.hip-item:hover{
+	border: 2px solid #F36E21;
+}
+
+/* Graduate Section */
+.graduate{
+	background-color: #333333;
+	width: 80%;
+	padding: 10% 10%;
+	text-align: center;
+	color: white;
+}
+.graduate > h3{
+	border-top: 1px solid #F36E21;
+	padding-top: 40px;
+	padding-bottom: 20px;
+	font-size: 25px;
+}
+.graduate h1{
+	padding-bottom: 50px;
+	font-size: 30px;
+}
+.graduate .title{
+	background-color:#333;
+}
+.graduate .title a{
+	color: white;
+}
+.graduate .content a{
+	color: white;
+	text-decoration: none;
+}
+.graduate .content a:hover{
+	text-decoration: underline;
+}
+.graduate .degrees{
+	margin-bottom: 30px;
+}
+.advancedCertificates p{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 20px;
+}
+
+/* Minor Section */
+.minors{
+	margin: 7% 5%;
+	text-align: center;
+}
+.minors h1{
+	padding-bottom: 40px;
+}
+#minors-container{
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+	grid-gap: 10px;
+}
+#minors-container div{
+	width: 100%;
+	padding: 80px 0;
+	background-color: #F36E21;
+	color: white;
+	font-weight: bold;
+}
+#minors-container div:hover{
+	background-color: #666666;
+	cursor: pointer;
+}
+
+/* Employment Section */
+.hr{
+	width: 80%;
+	margin: 0 10%;
+	border-top: 1px solid #adadad;
+}
+#employers hr, #careers hr{
+	width: 150px;
+	margin-bottom: 15px;
+	background-color: #dfe5eb;
+	border: none;
+	height: 2px;
+}
+#careers h3{
+	padding-top: 10px;
+}
+.employment{
+	width: 70%;
+	padding: 5% 15%;
+}
+.employment h2{
+	font-weight: normal;
+	padding-bottom: 20px;
+}
+.employment h3{
+	color: #F36E21;
+	padding-bottom: 10px;
+}
+#introduction{
+	padding: 5% 0;
+}
+#degreeStatistics{
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+	grid-gap: 10px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	width: 100%;
+}
+#degreeStatistics div{
+	padding: 20px;
+	border: 1px solid #666666;
+}
+#employers, #careers{
+	text-align: center;
+	overflow-wrap: break-words;
+}
+#employers span, #careers span{
+	border-right: 1px solid #bfc4c9;
+	font-size: 15px;
+	padding: 0 15px;
+	margin-top: 10px;
+}
+#employers span:last-child, #careers span:last-child{
+	border-right: 0px solid #dfe5eb;
+}
+.work{
+	margin: 5% 10%;
+	height:130vh;
+	text-align: center;
+}
+.work h1{
+	font-weight: 300;
+	font-size: 30px;
+}
+.work h2{
+	font-weight: 300;
+	font-size: 12px;
+}
+#map-iframe{
+	width: 90%;
+	margin: 5% 5% 5% 5%;
+	height: 70vh;
+}
+#coopTable{
+	margin-left: 9%;
+	height: 30vh;
+	width: 40%;
+	float: left;
+	background-color: #E08283;
+	margin-right: 2%;
+	text-align: center;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+#employmentTable{
+	height: 30vh;
+	width: 40%;
+	float: left;
+	background-color: #68C3A3;
+	text-align: center;
+	font-size: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+#employmentTable i, #coopTable i{
+	position: relative;
+	bottom: -45px;
+	left: -50%;
+}
+#employmentTable h4, #coopTable h4{
+	width: 100%;
+	padding-left: 2%;
+}
+#employmentTable:hover,#coopTable:hover{
+	cursor: pointer;
+	color: #666;
+}
+
+/* People Section */
+.people{
+	margin: 10% 5%;
+	text-align:center;
+}
+.people > h2{
+	margin-bottom: 30px;
+	margin-top: 20px;
+	font-weight: 300;
+}
+#peopleTitle h1{
+	font-weight: 300;
+	font-size: 30px;
+}
+#peopleSubTitle h3{
+	font-weight: 300;
+	margin-top: 10px;
+	font-size: 14px;
+}
+.active1{
+	border-bottom: 2px solid #F36E21;
+}
+#facbut{
+	padding-bottom: 3px;
+	margin-right: 20px;
+}
+#staffbut{
+	margin-left: 20px;
+	padding-bottom: 3px;
+}
+#facbut:hover, #staffbut:hover{
+	cursor: pointer;
+}
+#faculty{
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 10px;
+}
+#faculty div, #staff div{
+	transition: all .5s ease-in-out; 
+	width: 100%;
+	min-height: 10vh;
+	padding-top: 5vh;
+	border: 2px solid #F36E21;
+	color: #F36E21;
+	z-index:1;
+}
+#faculty div:hover, #staff div:hover{
+	transform: scale(1.3);
+	cursor: pointer;
+}
+#staff{
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 10px;
+	position: relative;
+}
+
+/* Research Section */
+#researchAreas{
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-gap: 10px;
+}
+#researchFacultyWork{
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-gap: 10px;
+}
+#blocks{
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 0px;
+}
+.researchByArea{
+	padding: 10% 5%;;
+	text-align: center;
+	background-color: #666;
+}
+.researchByFaculty{
+	padding: 10% 5%;;
+	text-align: center;
+}
+#researchAreas,#researchFacultyWork{
+	padding-top: 60px;
+}
+#researchByArea h1,#researchByArea h4{
+	color: white;
+}
+#researchByArea h1,#researchByFaculty h1{
+	font-size: 30px;
+	font-weight: 300;
+	padding-bottom: 10px;
+}
+#researchByArea h4,#researchByFaculty h4{
+	font-size: 15px;
+	font-weight: 300;
+}
+#researchAreas div{
+	height: 8vh;
+	padding-top: 5vh;
+	width: 100%;
+	background-color: #666;
+	color: white;
+	border: 2px solid white;
+	border-radius: 10%;
+}
+#researchFacultyWork div{
+	height: 8vh;
+	padding-top: 5vh;
+	width: 100%;
+	background-color: #333;
+	color: #F36E21;
+	border-radius: 10%;
+}
+#researchAreas div:hover,#researchFacultyWork div:hover{
+	cursor: pointer;
+}
+#researchAreas div:nth-of-type(1){border-color:#ec615c;}
+#researchAreas div:nth-of-type(2){border-color:#f4925a;}
+#researchAreas div:nth-of-type(3){border-color:#ffe47a;}
+#researchAreas div:nth-of-type(4){border-color:#c4f47c;}
+#researchAreas div:nth-of-type(5){border-color:#72f3ba;}
+#researchAreas div:nth-of-type(6){border-color:#6bd0a4;}
+#researchAreas div:nth-of-type(7){border-color:#74ddff;}
+#researchAreas div:nth-of-type(8){border-color:#61b6d2;}
+#researchAreas div:nth-of-type(9){border-color:#6b7bf4;}
+#researchAreas div:nth-of-type(10){border-color:#616ecc;}
+#researchAreas div:nth-of-type(11){border-color:#ec6efe;}
+#researchAreas div:nth-of-type(12){border-color:#c362d0;}
+#researchAreas div{
+	transition: all .5s ease-in-out; 
+	z-index:1;
+}
+#researchAreas div:hover{
+	transform: scale(1.3);
+	cursor: pointer;
+	z-index:2;
+}
+#researchFacultyWork div{
+	transition: all .5s ease-in-out; 
+	border: 1px solid white;
+}
+#researchFacultyWork div:hover{
+	transform: scale(1.3);
+	cursor: pointer;
+}
+
+/* Resources Section */
+.resources{
+	text-align:center;
+}
+.resources .hr{
+	padding-bottom: 5%;
+}
+#resourcesTitle h1{
+	font-size: 30px;
+	font-weight: 300;
+	padding-bottom: 10px;
+}
+#resourcesSubTitle h3{
+	font-size: 15px;
+	font-weight: 300;
+}
+#blocks{
+	padding-top: 50px;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 0px;
+}
+#blocks div{
+	padding-bottom: 8vh;
+	padding-top: 8vh;
+	width: 100%;
+	color: white;
+}
+#blocks div:hover{
+	cursor: pointer;
+	background-color: #666;
+}
+#studyAbroad{
+	background-color: #F5D76E;
+}
+#studentServices{
+	background-color: #68C3A3;
+}
+#tutorsAndLabInformation{
+	background-color: #E08283;
+}
+#studentAmbassadors{
+	background-color: #EB974E;
+}
+#forms{
+	background-color: #3498DB;
+}
+#coopEnrollment{
+	background-color: #A9ACAE;
+}
+
+/* Footer Section */
+#foot{
+	text-align: center;
+}
+#social{
+	background-image: url('../media/social.jpg');
+	height: 675px;
+}
+#social img{
+	width: 40px;
+}
+#social h1{
+	font-size: 40px;
+	color: #F36E21;
+}
+#social h1{
+	padding-top: 50px;
+	padding-bottom: 5px;
+}
+#social h2, #social h3{
+	padding-top: 20px;
+	padding-bottom: 5px;
+}
+#quickLinks{
+	padding: 30px;
+	background-color: #333;
+	color: white;
+}
+#quickLinks ul{
+	text-transform: capitalize;
+	list-style-type: none;
+	width: 60%;
+	margin-left: 20%;
+	margin-right:20%;
+}
+#quickLinks ul li{
+	padding: 10px;
+	border-bottom: 1px solid grey;
+}
+#quickLinks ul li a{
+	text-decoration:none;
+	color: white;
+}
+#quickLinks ul li a:hover{
+	opacity:0.5;
+}
+#quickLinks ul li:last-child{
+	border-bottom: 0px;
+}
+#news a{
+	padding: 20px;
+	border-radius: 10px;
+	background-color: #F36E21;
+}
+#news a:hover{
+	color: #333;
+	cursor: pointer;
+}
+#news, #copyright{
+	background-color: #333;
+	color: white;
+	padding: 30px;
+}
+#copyright p a, #news a{
+	text-decoration:none;
+	color: white
+}
+.fancybox-content h1{
+	padding-bottom: 15px;
+}	
+.fancybox-content div, .fancybox-content h2, .fancybox-content h3, .fancybox-content h4{
+	padding-top: 10px;
+	padding-bottom:10px;
+}
+.fancybox-content div, .fancybox-content p{
+	font-weight: 300;
+}
+.fancybox-content a{
+	display: inline-block;
+	padding-top: 10px;
+}
+.courses{
+	border: 1px solid #333;
+	text-align: center;
+	padding: 20px 5px;
+	margin: 10px 30px;
+}
+.courses:hover{
+	cursor: pointer;
+	border: 1px solid #F36E21;
+	color: #F36E21;
+	font-weight: bold;
+}
+@media only screen and (max-width: 1000px) {
+	/* Employment Section */
+	#degreeStatistics{
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto;
+		grid-gap: 10px;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		width: 100%;
+	}	
+	#social{
+		background-image: url('../media/social1000.jpg');
+		height: 675px;
+	}
+}
+@media only screen and (max-width: 900px) {
+	/* Both: (Under)graduate */
+	.degrees{
+		grid-template-columns: 1fr;
+		grid-gap: 20px;
+	}
+	
+	/* Minors Section */
+	#minors-container{
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto auto auto;
+		grid-gap: 10px;
+	}
+	
+	/* Employment Section */
+	#employmentTable {
+		width: 48%;
+		margin-right:0;
+		margin-left: 2%;
+	}
+	#coopTable{
+		width: 48%;
+		margin-left: 0;
+		margin-right: 2%;
+	}
+	
+	/* People Section */
+	#faculty{
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 10px;
+	}
+	#staff{
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 10px;
+		position: relative;
+	}
+	
+	/* Research Section */
+	#researchAreas{
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-gap: 10px;
+	}
+	#researchFacultyWork{
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 10px;
+	}
+	#researchFacultyWork div{
+		border-radius: 0%;
+	}
+	#researchAreas div, #researchFacultyWork div{
+		border-radius: 0%;
+	}
+	
+	/* Resources Section */
+	#blocks{
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 0px;
+	}
+	
+	/* Footer Section */
+	#social{
+		background-image: url('../media/social900.jpg');
+		height: 675px;
+	}
+}
+@media only screen and (max-width: 600px) {
+	/* Intro */
+	#heading{
+		font-size:15px;
+	}
+	/* About Section */
+	#aboutTitle{
+		font-size: 20px;
+	}
+	#description{
+		font-size: 12px;
+	}	
+	#quoteContent{
+		margin: 30px auto;
+	}	
+	#quoteContent h2{
+		font-size: 12px;
+	}
+	#quoteContent h4{
+		font-size: 10px;
+	}
+	
+	/* Minors Section */
+	#minors-container{
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto auto auto auto auto auto;
+		grid-gap: 10px;
+	}
+	
+	/* Employment Section */
+	#degreeStatistics{
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto auto;
+		grid-gap: 10px;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.work{
+		margin: 10%;
+		height: 150vh;
+	}
+	#employmentTable {
+		width: 100%;
+		margin-right: 0;
+		margin-left: 0;
+	}
+	#coopTable{
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+	
+	/* People Section */
+	.people{
+		margin: 10% 10%;
+		text-align:center;
+	}
+	#faculty{
+		grid-template-columns: 1fr;
+		grid-gap: 10px;
+	}
+	#staff{
+		grid-template-columns: 1fr;
+		grid-gap: 10px;
+		position: relative;
+	}
+	
+	/* Research Section */
+	#researchAreas{
+		grid-template-columns: 1fr;
+		grid-gap: 10px;
+	}
+	#researchFacultyWork{
+		grid-template-columns: 1fr;
+		grid-gap: 10px;
+	}
+	#researchFacultyWork div{
+		border-radius: 0%;
+	}
+	#researchAreas div, #researchFacultyWork div{
+		border-radius: 0%;
+	}
+	
+	/* Resources Section */
+	#blocks{
+		grid-template-columns: 1fr;
+		grid-gap: 0px;
+	}
+	
+	/* Footer Section */
+	#social{
+		background-image: url('../media/social600.jpg');
+	}
+}
+@media only screen and (max-width: 400px) {
+	/* About Section */
+	.quoteContent h2{
+		font-size: 12px;
+	}
+	.quoteContent h4{
+		font-size: 10px;
+	}
+	
+	/* Both: (Under)graduate */
+	.undergraduate h1, .graduate h1{
+		font-size: 20px;
+		padding-bottom: 30px;
+	}
+	.degrees div h2{
+		font-size: 15px;
+	}
+	.degrees p{
+		font-size: 12px;
+	}
+	.title p{
+		padding-top: 15px;
+	}
+	.title a{
+		font-size: 12px;
+	}
+	
+	/* Graduate Section */
+	.graduate h3{
+		font-size: 20px;
+	}
+	.graduate > h3{
+		padding-top: 20px;
+	}
+	.graduate p{
+		font-size: 15px;
+	}
+	.graduate .degrees{
+		margin-bottom: 10px;
+	}
+	
+	/* Footer Section */
+	#social{
+		background-image: url('../media/social400.jpg');
+	}
+}
